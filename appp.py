@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:5000/api"
+API_URL = "https://monapi.herokuapp.com/api"
 
 def login():
     st.title("Connexion")

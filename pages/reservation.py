@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from datetime import date, time
 
-API_URL = "http://localhost:5000/api"
+API_URL = "https://monapi.herokuapp.com/api"
 
 def app(user):
     st.title("Réserver une salle")
