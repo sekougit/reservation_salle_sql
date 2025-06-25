@@ -5,8 +5,8 @@ API_URL = "https://monapi.herokuapp.com/api"
 
 def login():
     st.title("Connexion")
-    email = st.text_input("Email")
-    password = st.text_input("Mot de passe", type="password")
+    email = st.text_input("Email").strip().lower()
+    password = st.text_input("Mot de passe", type="password").strip()
     if st.button("Se connecter"):
         res = requests.post(f"{API_URL}/login", json={"email": email, "password": password})
         if res.status_code == 200:
