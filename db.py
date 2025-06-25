@@ -31,7 +31,7 @@ import pandas as pd
 def get_connection():
     conn = pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=localhost\\SQLEXPRESS;"  # ou juste localhost si pas d'instance nommée
+        "SERVER=localhost"  # ou juste localhost si pas d'instance nommée
         "DATABASE=GestionReservationsSalles;"
         "Trusted_Connection=yes;"        # authentification Windows intégrée
     )
