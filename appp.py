@@ -13,7 +13,10 @@ def login():
             st.session_state["user"] = res.json()
             st.experimental_rerun()
         else:
-            st.error("Email ou mot de passe incorrect")
+            try:
+                st.error(res.json().get("error", "Email ou mot de passe incorrect"))
+            except Exception:
+                st.error("Erreur de connexion au serveur")
 
 def logout():
     st.session_state.pop("user", None)
